@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AimStore – Télécharger le launcher</title>
+<link rel="icon" href="AimStore_Logo.png">
+<style>
+  /* ===== COULEURS : remplace ces valeurs par celles de ton launcher ===== */
+  :root {
+    --bg: #0e1220;
+    --surface: #171c2e;
+    --accent: #6c63ff;
+    --accent-hover: #8179ff;
+    --text: #e8eaf6;
+    --muted: #8a90b0;
+    --radius: 14px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body { height: 100%; }
+
+  body {
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(108, 99, 255, .22), transparent 60%),
+      var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+  }
+
+  main { max-width: 460px; width: 100%; }
+
+  .logo {
+    width: 88px;
+    height: 88px;
+    border-radius: 22px;
+    margin: 0 auto 20px;
+    background: var(--surface);
+    object-fit: contain;
+    padding: 10px;
+    box-shadow: 0 0 0 1px rgba(255,255,255,.06), 0 12px 40px rgba(108, 99, 255, .25);
+  }
+
+  h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -.02em;
+    margin-bottom: 10px;
+  }
+
+  .tagline {
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 32px;
+  }
+
+  .download {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 16px 40px;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(108, 99, 255, .4);
+    transition: background .15s, transform .15s;
+  }
+  .download:hover { background: var(--accent-hover); transform: translateY(-2px); }
+  .download:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+  .info {
+    color: var(--muted);
+    font-size: .9rem;
+    margin-top: 16px;
+  }
+
+  .note {
+    background: var(--surface);
+    border-radius: var(--radius);
+    color: var(--muted);
+    font-size: .85rem;
+    line-height: 1.5;
+    margin-top: 36px;
+    padding: 14px 18px;
+    text-align: left;
+  }
+
+  .discord {
+    display: inline-block;
+    color: var(--text);
+    font-size: .95rem;
+    margin-top: 28px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .download { transition: none; }
+    .download:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="AimStore_Logo.png" alt="" onerror="this.style.display='none'">
+    <h1>AimStore</h1>
+    <p class="tagline">Le launcher de jeux simple et stable pour Windows.</p>
+
+    <a class="download" href="https://github.com/Montrase/aimstore-download/releases/latest/download/AimStore-Setup.exe">
+      Télécharger pour Windows
+    </a>
+
+    <p class="info">Gratuit. Windows 10 et 11.</p>
+
+    <p class="note">
+      Windows peut afficher « Windows a protégé votre ordinateur » au premier lancement.
+      Clique sur « Informations complémentaires », puis sur « Exécuter quand même ».
+    </p>
+
+    <a class="discord" href="https://discord.gg/FdsqHxRfQ">Rejoindre le Discord</a>
+  </main>
+</body>
+</html>
